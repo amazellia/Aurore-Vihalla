@@ -1,0 +1,329 @@
+:root {
+  font-size: 16px;
+  --transition-speed: 600ms;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    --text-primary: #222222;
+    --text-secondary: #3b3b3b;
+    --bg-primary: #f3f3f3;
+    --bg-secondary: #d1d1d1;
+}
+
+h1, h2, h3, h4, h5, h6, #ma {
+  font-family: 'Modern Antiqua', cursive;
+}
+
+/* Edit scroll bar */
+body::-webkit-scrollbar {
+    width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+    background:#1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position:fixed;
+    background-color: var(--bg-primary);
+    transition: width 600ms ease;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color:  var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(50%) opacity(0.8);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+    width: 1rem;
+    min-width: 1.5rem;
+    margin: 0 1.5rem;
+}
+
+.fa-primary {
+    color: #c17eff;;
+}
+
+.fa-secondary {
+    color: #a849df;
+}
+
+.fa-primary, .fa-secondary {
+    transition: var(--transition-speed);
+}
+
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+  }
+  
+  .logo svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+  }
+  
+  .logo-text
+  {
+    margin-left: 1rem;
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+  }
+  
+  .navbar:hover .logo svg {
+    transform: rotate(-180deg);
+  }
+
+  #appearAbout, #appearWho, #appearGame, #index {
+    display: none;
+  }
+
+  .center-xy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 75%;
+    z-index: 1;
+}
+
+.centerGame {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+#appearAbout {
+  margin: 10% 5%;
+}
+
+
+body #unicorn {
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+    linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+    linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+    linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+    /* ref: https://codepen.io/straybugs/pen/yvrgVZ */
+}
+
+#home {
+  background-color: white;
+  color: black;
+  margin: 12% auto;
+  height: 100%;
+  width: 70%;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.bgpic {
+  background-image: url('https://cdna.artstation.com/p/assets/images/images/025/705/716/large/yang-sohyeon-jpg.jpg?1586681757');
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+  
+  /* Small screens */
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      bottom: 0;
+      width: 100vw;
+      height: 5rem;
+      position: relative;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .navbar-nav {
+      flex-direction: row;
+    }
+  
+    .nav-link {
+      justify-content: center;
+    }
+  
+    main {
+      margin: 0;
+    }
+  }
+  
+  /* Large screens */
+  @media only screen and (min-width: 600px) {
+    .navbar {
+      top: 0;
+      width: 5rem;
+      height: 100vh;
+    }
+  
+    .navbar:hover {
+      width: 16rem;
+    }
+  
+    .navbar:hover .link-text{
+      display: inline;
+    }
+
+    .navbar:hover .logo svg
+    {
+      margin-left: 11rem;
+    }
+  
+    .navbar:hover .logo-text
+    {
+      left: 0px;
+    }
+  }
+  
+  .dark {
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #37373f;
+    background-color: #141418;
+    color: #ececec;
+
+  }
+  
+  .light {
+    --text-primary: #1f1f1f;
+    --text-secondary: black;
+    --bg-primary: #ffffff;
+    --bg-secondary: #e4e4e4;
+    background-color: #ffffff;
+    color: #222222;
+  }
+  
+  .solar {
+    --text-primary: #f87a64;
+    --text-secondary: #ee946d;
+    --bg-primary: #f6d992;
+    --bg-secondary: #f6cf92;
+    background-color: #fae7b1;
+    color: #194264;
+  }
+  
+.theme-icon {
+    display: none;
+  }
+  
+  .dark #darkIcon {
+    display: block;
+  }
+  
+  .light #lightIcon {
+    display: block;
+  }
+  
+  .solar #solarIcon {
+    display: block;
+  }
+
+  /*Pullee*/
+  
+  .pullee {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: var(--bg-secondary);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .pullee:hover {
+    opacity: 1;
+  }
+  
+  .pullee::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: url('assets/wand.png');
+    cursor: pointer;
+  }
+  
+  .pullee::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: url('assets/wand.png');
+    cursor: pointer;
+  }

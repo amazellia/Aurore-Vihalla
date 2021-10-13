@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Aurore Vihalla</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Open+Sans&display=swap" rel="stylesheet">
+        <!-- Icons -->
+        <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
+        <script src="https://kit.fontawesome.com/4db6dff0e0.js" crossorigin="anonymous"></script>
+        <!-- Links to files -->
+        <link rel="stylesheet" href="style.css"/>
+        <script defer src="javascript.js"></script>
+
+    </head>
+
+    <body>
+      <!--Slide to unlock-->
+      <div id="land">
+        <div class="center-xy">
+          <h1>Slide Wand to Unlock</h1>
+          <input type="range" value="0" class="pullee" />  
+        </div>
+      </div>
+    
+    <!--Unlocked Aurore Vihalla !!-->
+    <div id="index">
+      <!-- Navigation -->
+      <nav class="navbar">
+        <ul class="navbar-nav">
+      
+            <li class="logo">
+                <a href="#" onclick="home()" class="nav-link">
+                    <span class="theme-icon logo-text" id="lightIcon"><h1>Lumos</h1></span>
+                    <span class="theme-icon logo-text" id="solarIcon"><h3>Solaris</h3></span>
+                    <span class="theme-icon logo-text" id="darkIcon"><h1>Nox</h1></span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-right" class="svg-inline--fa fa-angles-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z"></path></svg>
+                    
+                </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" onclick="appearAbout()" class="nav-link">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="hat-wizard" class="svg-inline--fa fa-hat-wizard" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M200 376l-49.23-16.41c-7.289-2.434-7.289-12.75 0-15.18L200 328l16.41-49.23c2.434-7.289 12.75-7.289 15.18 0L248 328l49.23 16.41c7.289 2.434 7.289 12.75 0 15.18L248 376L240 416H448l-86.38-201.6C355.4 200 354.8 183.8 359.8 168.9L416 0L228.4 107.3C204.8 120.8 185.1 141.4 175 166.4L64 416h144L200 376zM231.2 172.4L256 160l12.42-24.84c1.477-2.949 5.68-2.949 7.156 0L288 160l24.84 12.42c2.949 1.477 2.949 5.68 0 7.156L288 192l-12.42 24.84c-1.477 2.949-5.68 2.949-7.156 0L256 192L231.2 179.6C228.2 178.1 228.2 173.9 231.2 172.4zM496 448h-480C7.164 448 0 455.2 0 464C0 490.5 21.49 512 48 512h416c26.51 0 48-21.49 48-48C512 455.2 504.8 448 496 448z"></path></svg>
+                  <span id='ma' class="link-text">About</span>
+              </a>
+          </li>
+        
+            <li class="nav-item theme-icon" id="darkIcon">
+              <a href="#" onclick="appearGame()" class="nav-link" >
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paw" class="svg-inline--fa fa-paw" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 224c-79.37 0-191.1 122.7-191.1 200.2C64.02 459.1 90.76 480 135.8 480C184.6 480 216.9 454.9 256 454.9C295.5 454.9 327.9 480 376.2 480c44.1 0 71.74-20.88 71.74-55.75C447.1 346.8 335.4 224 256 224zM108.8 211.4c-10.37-34.62-42.5-57.12-71.62-50.12S-7.104 202 3.27 236.6C13.64 271.3 45.77 293.8 74.89 286.8S119.1 246 108.8 211.4zM193.5 190.6c30.87-8.125 46.37-49.1 34.5-93.37s-46.5-71.1-77.49-63.87c-30.87 8.125-46.37 49.1-34.5 93.37C127.9 170.1 162.5 198.8 193.5 190.6zM474.9 161.3c-29.12-6.1-61.25 15.5-71.62 50.12c-10.37 34.63 4.75 68.37 33.87 75.37c29.12 6.1 61.12-15.5 71.62-50.12C519.1 202 503.1 168.3 474.9 161.3zM318.5 190.6c30.1 8.125 65.62-20.5 77.49-63.87c11.87-43.37-3.625-85.25-34.5-93.37c-30.1-8.125-65.62 20.5-77.49 63.87C272.1 140.6 287.6 182.5 318.5 190.6z"></path></svg>
+                  <span id='ma' class="link-text">Nox</span>
+              </a>
+          </li>
+  
+          <li class="nav-item theme-icon" id="solarIcon">
+            <a href="#" onclick="appearGame()" class="nav-link" >
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cat" class="svg-inline--fa fa-cat" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M322.6 192C302.4 192 215.8 194 160 278V192c0-53-43-96-96-96C46.38 96 32 110.4 32 128s14.38 32 32 32s32 14.38 32 32v256c0 35.25 28.75 64 64 64h176c8.875 0 16-7.125 16-15.1V480c0-17.62-14.38-32-32-32h-32l128-96v144c0 8.875 7.125 16 16 16h32c8.875 0 16-7.125 16-16V289.9c-10.25 2.625-20.88 4.5-32 4.5C386.2 294.4 334.5 250.4 322.6 192zM480 96h-64l-64-64v134.4c0 53 43 95.1 96 95.1s96-42.1 96-95.1V32L480 96zM408 176c-8.875 0-16-7.125-16-16s7.125-16 16-16s16 7.125 16 16S416.9 176 408 176zM488 176c-8.875 0-16-7.125-16-16s7.125-16 16-16s16 7.125 16 16S496.9 176 488 176z"></path></svg>
+              <span id='ma' class="link-text">Stella</span>
+            </a>
+        </li>
+  
+        <li class="nav-item theme-icon" id="lightIcon">
+          <a href="#" onclick="appearGame()" class="nav-link" >
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+   width="1280.000000pt" height="1280.000000pt" viewBox="0 0 1280.000000 1280.000000"
+   preserveAspectRatio="xMidYMid meet">
+  <metadata>
+  Created by potrace 1.15, written by Peter Selinger 2001-2017
+  </metadata>
+  <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+   fill="#fffff" stroke="none">
+  <path d="M11984 11729 c-239 -127 -499 -269 -664 -364 -107 -62 -265 -150
+  -350 -198 -85 -47 -231 -131 -325 -187 -192 -114 -454 -250 -532 -275 -55 -18
+  -97 -15 -106 9 -3 7 11 31 30 52 58 62 112 152 134 223 39 125 24 334 -27 368
+  -42 27 -65 7 -122 -111 -48 -96 -158 -256 -230 -334 -35 -38 -70 -41 -166 -16
+  -86 22 -123 47 -136 92 -5 20 -10 102 -10 182 -1 243 -21 350 -70 370 -42 17
+  -61 7 -133 -70 -77 -81 -128 -178 -158 -300 -22 -88 -48 -130 -82 -130 -11 0
+  -52 18 -91 39 -99 55 -174 75 -276 74 -87 -1 -106 -6 -329 -87 -142 -53 -266
+  -34 -387 58 -55 42 -101 47 -130 15 -15 -17 -19 -34 -17 -82 3 -80 31 -135 89
+  -175 53 -38 50 -48 -26 -87 -64 -33 -140 -52 -250 -65 -192 -22 -455 -85 -480
+  -115 -19 -23 -15 -65 9 -88 20 -20 35 -22 237 -29 118 -4 223 -12 233 -18 23
+  -12 31 -39 20 -67 -12 -33 -87 -78 -199 -122 -238 -92 -310 -190 -282 -385 30
+  -205 1 -253 -185 -311 -108 -33 -143 -64 -143 -126 0 -79 52 -126 161 -148 89
+  -19 113 -62 57 -104 -20 -15 -51 -22 -126 -28 -201 -15 -282 -89 -282 -256 0
+  -72 0 -72 -49 -127 -26 -31 -71 -103 -99 -159 -43 -87 -63 -115 -122 -171 -39
+  -36 -95 -80 -125 -97 -134 -76 -155 -178 -46 -231 74 -37 157 -31 249 17 56
+  29 76 35 85 26 19 -19 14 -224 -6 -291 -22 -76 -71 -146 -121 -175 -84 -49
+  -191 -49 -441 0 -132 26 -156 28 -435 29 -318 1 -373 -4 -565 -54 -263 -67
+  -504 -209 -670 -394 -39 -43 -82 -84 -97 -92 -35 -18 -89 -18 -132 0 -78 32
+  -187 49 -285 43 -104 -6 -165 -24 -276 -79 -66 -33 -78 -36 -200 -42 -346 -19
+  -541 -79 -727 -227 -164 -130 -277 -317 -329 -549 -25 -112 -35 -367 -20 -520
+  7 -63 15 -159 18 -212 10 -166 -13 -201 -232 -348 -157 -107 -227 -178 -285
+  -295 -54 -107 -73 -189 -73 -305 0 -104 20 -194 58 -270 26 -51 88 -116 120
+  -126 53 -17 112 -74 205 -197 55 -73 120 -158 144 -190 48 -62 62 -113 54
+  -191 -12 -101 -93 -218 -187 -270 -42 -22 -70 -29 -164 -36 -63 -5 -138 -15
+  -168 -21 -249 -52 -417 -309 -365 -558 21 -100 91 -238 170 -338 66 -83 94
+  -101 135 -88 36 11 35 42 -4 118 -75 150 -68 272 21 367 46 49 123 94 137 81
+  4 -4 -5 -32 -20 -61 -26 -50 -28 -63 -28 -165 0 -103 2 -114 31 -176 41 -87
+  90 -139 194 -209 47 -32 95 -68 107 -81 76 -83 68 -254 -14 -319 -33 -26 -85
+  -26 -183 0 -254 66 -501 42 -740 -71 -184 -87 -314 -207 -395 -364 -20 -38
+  -45 -81 -55 -96 -22 -29 -28 -113 -10 -124 24 -15 74 11 147 76 194 175 439
+  293 606 292 73 0 64 4 317 -131 129 -68 294 -127 385 -137 79 -8 182 9 259 44
+  34 15 113 44 177 64 233 74 330 177 345 372 3 39 2 89 -4 112 -8 34 -6 46 9
+  70 27 40 24 71 -12 139 -46 85 -51 165 -15 238 36 73 146 189 260 275 173 129
+  262 253 307 426 27 106 27 279 0 487 -11 86 -18 164 -15 172 4 11 19 16 44 16
+  57 0 98 11 104 27 3 8 -8 44 -25 79 -62 128 -50 191 70 394 202 339 241 526
+  187 905 -14 99 -28 212 -31 250 l-5 70 36 -75 c79 -164 86 -197 114 -555 5
+  -71 21 -175 34 -229 19 -76 23 -108 16 -135 -4 -20 -20 -80 -34 -133 -17 -64
+  -29 -149 -36 -250 -27 -383 -35 -417 -125 -539 -68 -93 -95 -172 -95 -280 0
+  -67 7 -100 39 -197 70 -208 91 -387 91 -781 0 -265 -7 -308 -65 -418 -56 -106
+  -46 -167 44 -267 60 -66 64 -91 21 -140 -64 -73 -99 -216 -80 -331 14 -88 32
+  -104 146 -140 69 -21 101 -25 206 -25 122 0 126 1 165 29 74 53 103 113 103
+  209 0 79 -20 127 -85 214 -48 64 -60 105 -51 170 19 131 18 216 -2 323 -38
+  202 -44 259 -49 520 -6 299 6 499 34 550 10 18 32 57 48 87 30 53 30 53 31
+  223 1 277 33 360 236 612 40 50 93 127 117 170 97 173 158 273 229 377 93 135
+  113 185 151 370 31 147 53 206 88 238 32 29 90 48 145 48 45 0 61 -6 127 -50
+  42 -27 135 -77 206 -110 72 -34 158 -75 192 -91 71 -34 145 -110 164 -167 6
+  -20 47 -114 90 -208 112 -242 122 -287 123 -509 1 -209 -11 -266 -87 -395 -25
+  -41 -48 -89 -51 -107 -9 -38 16 -96 69 -161 25 -32 35 -53 35 -79 0 -80 19
+  -113 130 -223 58 -58 143 -154 187 -215 476 -644 509 -697 563 -895 17 -63 36
+  -121 43 -130 33 -45 67 -74 108 -95 76 -39 124 -37 173 6 55 48 71 25 36 -52
+  -26 -57 -27 -160 -2 -209 27 -55 66 -68 237 -79 83 -6 196 -11 253 -11 150 0
+  171 16 172 125 0 239 -115 392 -364 485 -88 33 -134 73 -166 143 -30 67 -65
+  105 -120 132 -109 54 -185 141 -388 445 -132 198 -175 286 -203 420 -12 58
+  -46 180 -75 271 -79 243 -76 269 40 419 68 87 147 244 176 350 11 41 29 125
+  40 185 11 61 31 146 45 190 14 44 29 117 32 162 3 50 11 87 19 94 7 6 69 21
+  137 34 155 28 263 61 452 138 133 53 158 60 220 61 95 0 158 -30 266 -128 112
+  -103 250 -195 439 -291 136 -70 164 -89 231 -155 80 -79 115 -136 155 -254 33
+  -96 80 -175 173 -290 96 -120 162 -242 241 -450 97 -255 109 -332 69 -462 -33
+  -107 -13 -175 81 -279 60 -67 63 -90 14 -135 -46 -42 -71 -98 -85 -194 -21
+  -137 16 -322 85 -424 66 -98 184 -135 259 -81 36 25 148 159 184 219 60 99 66
+  226 18 373 -29 89 -32 163 -10 252 17 70 19 152 5 213 -6 24 -42 113 -80 198
+  -138 303 -317 773 -330 863 -5 36 -10 107 -10 156 0 113 -26 211 -86 325 -74
+  141 -123 199 -210 250 -42 25 -102 70 -134 100 -48 47 -253 310 -279 359 -29
+  53 127 158 269 180 36 6 183 11 327 11 353 0 404 10 689 140 158 72 350 143
+  420 154 24 4 60 2 85 -4 79 -21 119 -76 119 -164 0 -57 -83 -620 -101 -691
+  -16 -59 -46 -112 -104 -187 -96 -123 -117 -197 -91 -324 l8 -41 -122 -18
+  c-191 -29 -232 -59 -265 -195 -24 -98 -17 -262 14 -343 29 -75 72 -124 122
+  -138 87 -26 269 31 346 108 22 22 68 90 103 151 77 136 136 211 215 274 84 68
+  97 96 107 242 18 262 44 435 142 941 88 454 94 573 37 690 -40 81 -141 184
+  -220 222 -53 27 -62 28 -176 25 -66 -2 -277 -7 -470 -11 -350 -7 -350 -7 -425
+  -35 -117 -44 -125 -44 -139 -4 -7 18 -16 105 -22 193 -60 956 -107 1225 -305
+  1757 -22 61 -16 67 101 93 40 9 146 117 180 185 34 68 51 151 65 330 22 273
+  77 554 161 817 71 220 85 367 53 552 -9 55 -12 97 -7 102 5 5 61 -43 134 -116
+  137 -137 158 -147 204 -100 24 23 25 30 25 149 0 138 -11 204 -46 285 -13 29
+  -24 59 -24 66 0 7 34 32 76 55 42 23 140 85 218 138 77 53 177 118 221 145 43
+  27 100 66 126 88 55 46 437 292 856 551 162 100 299 191 305 201 12 23 -14 67
+  -41 67 -10 0 -45 -14 -77 -31z"/>
+  </g>
+              </svg>
+            <span id='ma' class="link-text">Xyreina</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="#" onclick="appearWho()" class="nav-link">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ghost" class="svg-inline--fa fa-ghost" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M186.1 .1032c-105.1 3.126-186.1 94.75-186.1 199.9v264c0 14.25 17.3 21.38 27.3 11.25l24.95-18.5c6.625-5.001 16-4.001 21.5 2.25l43 48.31c6.25 6.251 16.37 6.251 22.62 0l40.62-45.81c6.375-7.251 17.62-7.251 24 0l40.63 45.81c6.25 6.251 16.38 6.251 22.62 0l43-48.31c5.5-6.251 14.88-7.251 21.5-2.25l24.95 18.5c10 10.13 27.3 3.002 27.3-11.25V192C384 83.98 294.9-3.147 186.1 .1032zM128 224c-17.62 0-31.1-14.38-31.1-32.01s14.38-32.01 31.1-32.01s32 14.38 32 32.01S145.6 224 128 224zM256 224c-17.62 0-32-14.38-32-32.01s14.38-32.01 32-32.01c17.62 0 32 14.38 32 32.01S273.6 224 256 224z"></path></svg>
+              <span id='ma' class="link-text">Who</span>
+            </a>
+        </li>
+      
+        <li class="nav-item" id="themeButton">
+            <a href="#" class="nav-link">
+              <svg
+                class="theme-icon"
+                id="lightIcon"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fad"
+                data-icon="sun"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="svg-inline--fa fa-sun fa-w-16 fa-7x"
+              >
+                <g class="fa-group">
+                  <path
+                    fill="currentColor"
+                    d="M502.42 240.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.41-94.8a17.31 17.31 0 0 0-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4a17.31 17.31 0 0 0 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.41-33.5 47.3 94.7a17.31 17.31 0 0 0 31 0l47.31-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3a17.33 17.33 0 0 0 .2-31.1zm-155.9 106c-49.91 49.9-131.11 49.9-181 0a128.13 128.13 0 0 1 0-181c49.9-49.9 131.1-49.9 181 0a128.13 128.13 0 0 1 0 181z"
+                    class="fa-secondary"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M352 256a96 96 0 1 1-96-96 96.15 96.15 0 0 1 96 96z"
+                    class="fa-primary"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                class="theme-icon"
+                id="solarIcon"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fad"
+                data-prefix="fad"
+                data-icon="moon-stars"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="svg-inline--fa fa-moon-stars fa-w-16 fa-7x"
+              >
+                <g class="fa-group">
+                  <path
+                    fill="currentColor"
+                    d="M320 32L304 0l-16 32-32 16 32 16 16 32 16-32 32-16zm138.7 149.3L432 128l-26.7 53.3L352 208l53.3 26.7L432 288l26.7-53.3L512 208z"
+                    class="fa-secondary"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M332.2 426.4c8.1-1.6 13.9 8 8.6 14.5a191.18 191.18 0 0 1-149 71.1C85.8 512 0 426 0 320c0-120 108.7-210.6 227-188.8 8.2 1.6 10.1 12.6 2.8 16.7a150.3 150.3 0 0 0-76.1 130.8c0 94 85.4 165.4 178.5 147.7z"
+                    class="fa-primary"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                class="theme-icon"
+                id="darkIcon"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="fire-flame-curved"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                class="svg-inline--fa fa-fire-flame-curved"
+              >
+                <g class="fa-group">
+                  <path
+                    fill="currentColor"
+                    d="M384 319.1C384 425.9 297.9 512 192 512s-192-86.13-192-192c0-58.67 27.82-106.8 54.57-134.1C69.54 169.3 96 179.8 96 201.5v85.5c0 35.17 27.97 64.5 63.16 64.94C194.9 352.5 224 323.6 224 288c0-88-175.1-96.12-52.15-277.2c13.5-19.72 44.15-10.77 44.15 13.03C215.1 127 384 149.7 384 319.1z"
+                    class="fa-secondary"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M384 319.1C384 425.9 297.9 512 192 512s-192-86.13-192-192c0-58.67 27.82-106.8 54.57-134.1C69.54 169.3 96 179.8 96 201.5v85.5c0 35.17 27.97 64.5 63.16 64.94C194.9 352.5 224 323.6 224 288c0-88-175.1-96.12-52.15-277.2c13.5-19.72 44.15-10.77 44.15 13.03C215.1 127 384 149.7 384 319.1z"
+                    class="fa-primary"
+                  ></path>
+                </g>
+              </svg>
+              <span id='ma' class="link-text">Skadoosh</span>
+            </a>
+          </li>
+      
+      
+        </ul>
+      </nav>
+
+      <main class="bgpic">
+          <div id="home"> 
+            <h1>Welcome to Aurore Vihalla!</h1> 
+          <p>
+            You have been accepted into the most diverse and determined wizard academy! We are the first educational establishment that focuses on managing 
+            over the 'mythological' creatures that appeared on Earth 100 years ago. Now, we will give you a taste of what it is like to interconnect with
+            magical creatures here at the academy. You will experience the three major principles of magic: vision, interaction, and soul. 
+          </p>
+          <p>
+            You can look around the three wizardly houses - Nox, Solaris, and Lumos - by channeling energy to your wand towards the &#128293; Ignis, 
+            &#9728;&#65039; Solis, or &#127769; Luna apparatus respectively and say 'Skadoosh'!
+          </p>
+          </div>
+      </main>
+            
+      <!-- About -->
+      <main id="appearAbout">
+      
+        <div class="theme-icon" id="solarIcon">
+          <h1>&#9728;&#65039; Solaris</h1>
+          <p>
+            Solaris consists of creatures that live beyond the horizons: &#127756; space. We present to you, Stella the Space Kitty, who has travelled
+            across the galaxy with extraterrestrial friends and guardians. She presents her story of how she was born and raised in the Orion Nebula.
+          </p> <br/>
+          <h1>&#128008; Stella: Space Kitty</h1>
+          <blockquote>
+            In the depths of the galaxy, there lived four guardians who protect the star sanctuary, the Orion Nebula. Until one day, a huge blast of light
+            shook the entire Nebula. Once they discovered the source, a huge responsibility has fallen on the guardians – no, not fighting aliens or
+            saving planets – it was to take care of a space kitty called Stella. Hop in for a journey to help Stella grow and make friends! 
+            <a href="#" onclick="appearGame()"> Cast your energy here to immerse yourself to her story! </a>
+          </blockquote>
+        </div>
+      
+        <div class="theme-icon" id="darkIcon">
+          <h1>&#127769; No(t)x Crazy </h1>
+          <p>
+            Nox is placed in under the 🌃 moonlight, with creatures born out of the shadows. They are known to be silent, unpredictable, and/or 
+            crazy. The testimony that will be demonstated is about Nox, the first Noxious creature that is told through visions and word of mouth by those
+            who has seen Nox - and most of it tells of how crazy he was, despite how the dog looks 'not crazy'. 
+          </p> <br/>
+          <h1>🐕 Nox</h1>
+          <blockquote>
+            Woof, I'm Nox and totally not crazy!!
+            <a href="#" onclick="appearGame()" style="color: aquamarine;"> Prepare your energy here to his story! </a>
+          </blockquote>
+        </div>
+      
+        <div class="theme-icon" id="lightIcon">
+          <h1>&#128293; Lumos</h1>
+          <p>
+            Lumos prides themselves in their burning will of fire ✨, the creatures discovered are born from the determined souls of past wizards.
+            Xyreina is the last unicorn alive that continually trains creatures to bring peace and protection. Her horn serves as the conductor of 
+            passionate Lumosian creatures - the Queen of the Light. You can observe how she uses her power by relaxing and enjoying. 
+          </p> <br/>
+          <h1>🦄 Xyreina's Magical Canvas </h1>
+          <blockquote>
+            I embrace you with courage and magic. Then you can face your fears. 
+            <a href="#" onclick="appearGame()" style="color: #fa7495"> Feel Xyreina's magical, dreamy, power touch </a>
+            by tapping your cursor over her magical canvas. 
+            
+          </blockquote>
+        </div>
+      
+      </main>
+      
+      <!-- Who -->
+      <main id="appearWho">
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        <div>
+          <h1>Amanda Patricia Viray</h1>
+          <p>
+            Studying Bachelor of Information Technology (Interactive Media) at my final year, I am passionate about technology, creative arts, and studying. 
+            With my enthusiasm on learning new things, resilience during COVID19 as an international student, and determination to grow out of my confort zone, I was able to achieve scholarships like HEX and FEBE Summer 
+            Research Scholarship, join clubs like FOCUS and iLead, bond with like-minded friends, and practice my communication skills. 
+
+            As a part of the course called Interactive Media (CMNS3560), this website focuses on the integration and interactions that supports the meaningful
+            content and reacts to the user's actions towards the media. Click the 'Skadoosh' to see different aspects on the project's making. (10/12/2021)
+          </p>
+        </div>
+        <div class="theme-icon" id="solarIcon">
+          <h1> Soul (Story) </h1><blockquote>
+          <p>
+            I was inspired by my love for animals, fantasy, and magical academy genre. Especially with Bella Sara, which was a part of my childhood,
+            it is a children's card trading game that combined a world of magical horses with game play. I remeber how immersive their website was, 
+            just when I opened the page, it welcomed me as their member - it was very impactful to me as a child! Even when creating your own account to
+            taking care all horses in the stable, it made me feel like a part of something, somewhere that I can belong to - and that felt like an
+            interconnection between interactivity (world of magical horses) and integration (website gameplay). 
+          </p>
+          <p>
+            So with Aurore Vihalla, I want users to feel empowered when they open a website, they have a purpose and accepting them into a cool magical academy while integrating
+            mini-games like Nox Crazy and Xyreina's Magical Canvas or a narrative story such as Stella. Using the Self-Determination Theory by psychologists Edward Deci and Richard Ryan, the relatedness
+            it draws the nature to be social, connected to others, and involved in environment enhances the engagement of users. 
+          </p>
+          <p>
+            Thank you to all my friends who has tested the game several times
+            to make sure it was working (Elmo, Sheika, and Jacob) and to my tutor, Micheal Meany for his valuable feedback! My take on integrating the 
+            interactive element is to immerse the players into the world of Aurore Vihalla as they open the website by asking them immediately to unlock
+            the slider and their name, reacting to user input already and bringing active participation.
+          </p></blockquote>
+        </div>
+        <div class="theme-icon" id="darkIcon">
+          <h1> Interactivity (Code) </h1>
+          <h2>Interactions</h2>
+          <h3> Nox Crazy</h3>
+          <li>Hold mouse click - to release Nox from the bubble</li>
+          <li>Object following mouse - Nox swims lika a fish </li>
+          <li>Drag and shoot - Nox flys to get sunflowers</li>
+          <li>Wack-a-mole mouse clicks - Nox turned to a bunny</li>
+          <li>Jump (Space) and Crouch (↓) - Nox as a magical horse</li>
+          <li>Narrative Storytelling</li>
+          <h3> Xyreina's Magical Canvas </h3>
+          <li>Generative art clicks</li>
+          <h3>Stella: Space Kitty</h3>
+          <li>Narrative Storytelling</li>
+          
+          <p> 
+            <h2>Tools</h2>
+            <li><b>HTML/CSS/JavaScript</b> - Used to create the website from scratch.</li>
+            <li>
+              <b>Unity</b> - This is my first time creating mini-games with Unity and C#, and they were absolutely fun to learn with! Found out how smooth it was to 
+              learn C#, but it still took determination and long hours of dedication. Although many debuggings had to be resolved and analysed, 
+              it was a great learning experience. I enjoyed fixing problems, no matter how many hours it takes just to make it work - hoping to bring it more into future projects and further my goals to be an aspiring creative 
+              technologist! Teaching myself to learn Unity will bring benefits in rapid prototyping and my interest in game development, creating a good 
+              foundation of coding with fun. 
+            </li>
+            <li><b>CodePen</b> - easier to embed 'pens' to websites.</li>
+            <li><b>itch.io</b> - previously used Simmer.io but researched that itch.io has more features such as full-screen on web.</li>
+            <li><b>Github Pages</b> - Used to host my website for free.</li>
+            <li><b>Twine (Harlowe)</b> - Used to create Stella.</li>
+          
+            <h2>References</h2>
+            <li> Slider to unlock: https://codepen.io/souporserious/pen/XJQLEb </li>
+            <li> Navigation Bar: https://github.com/fireship-io/222-responsive-icon-nav-css </li>
+            <li> Customizing Slider: https://www.w3schools.com/howto/howto_js_rangeslider.asp </li>
+            <li> https://www.w3schools.com - my all-time favorite tutorial source ⭐ </li>
+            <li> And last but not the least, Stack Overflow 💖 </li>
+          </p>
+        </div>
+        <div class="theme-icon" id="lightIcon">
+          <h1> Vision (Art) </h1>
+            <h2>Tools</h2>
+            <li>Aesprite - All my assets in No(x)t Crazy has been drawn by me except the ones mentioned below References.</li>
+            
+            <h2>References</h2>
+            <li>https://ansimuz.itch.io/magic-cliffs-environment</li>
+            <li>https://opengameart.org/content/underwater-diving-pack</li>
+            <li>www.silvermansound.com/free-music/ - for music in No(x)t Crazy Game</li>
+            <li>https://opengameart.org/content/dog-barking-mono</li>
+            <li>https://freesound.org - for SFX of No(x)t Crazy</li>
+            <li>https://uxdesign.cc/top-navigation-vs-side-navigation-wich-one-is-better-24aa5d835643 - researching website navigation</li>
+            <li>https://99designs.com.au/blog/web-digital/ux-design-principles/ - researching UX principles to apply</li>
+
+            <h2>Credits</h2>
+            <li>Fantasy Castle Illustration by <a href="https://yangsh.artstation.com/projects/3oy1nm">Yang Sohyeon </a></li>
+            </div>
+      </main>
+      
+      
+      <!-- Game -->
+      <main id="appearGame">
+        <!--  Game -->
+        <div class="centerGame">
+          <iframe frameborder="0" src="https://itch.io/embed-upload/4593358?color=000000" 
+        allowfullscreen="" class="theme-icon centerGame" id="darkIcon" width="980" height="640">
+        <a href="https://amazellia.itch.io/noxcrazy">
+          Play No(t)x Crazy on itch.io
+        </a></iframe>
+        </div>
+        
+
+        <!-- Stella: Space Kitty -->
+          <iframe frameborder="0" src="https://amazellia.github.io/Stella-SpaceKitty/"
+        width="90%" height="900px" class="theme-icon centerGame" id="solarIcon" >
+        </iframe>
+        
+
+        <!-- Xyreina's Magical Canvas -->
+          <div class="theme-icon" id="lightIcon">
+            <p class="codepen" data-height="700" data-theme-id="dark" data-default-tab="result" data-slug-hash="gOxbOeL" data-user="_amazellia" style="height: 100%; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/_amazellia/pen/gOxbOeL">
+            Dreamy Cloud Star Touch</a> by Amanda Patricia Viray (<a href="https://codepen.io/_amazellia">@_amazellia</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        
+      </main>
+    </div>
+  </body>
+</html>
