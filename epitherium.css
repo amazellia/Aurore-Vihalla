@@ -57,3 +57,6 @@ a:visited {
 #about {
     display: none;
 }
+img {
+    border: royalblue;
+}
