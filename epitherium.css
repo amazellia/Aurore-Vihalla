@@ -35,9 +35,6 @@ h1, h2, h3, h4, h5, h6 {
 ul {
     list-style-type: none;
 }
-li {
-    display: inline;
-}
 
 svg {
     font-size: 40px;
@@ -53,6 +50,10 @@ a:visited {
     text-align: center;
 }
 
-#home {
+#home, #about {
     margin: 7rem;
+}
+
+#about {
+    display: none;
 }
