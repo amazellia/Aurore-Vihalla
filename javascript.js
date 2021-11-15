@@ -97,7 +97,7 @@ const themeMap = {
     document.getElementById("appearWho").style.display="none"; 
     document.getElementById("appearGame").style.display="none"; 
     document.getElementById("home").style.display="none";
-
+    document.getElementById("bgpic").style.display="none";
   }
 
   function appearWho() { 
@@ -105,6 +105,7 @@ const themeMap = {
     document.getElementById("appearAbout").style.display="none"; 
     document.getElementById("appearGame").style.display="none"; 
     document.getElementById("home").style.display="none";
+    document.getElementById("bgpic").style.display="none";
   }
 
   function appearGame() { 
@@ -112,13 +113,15 @@ const themeMap = {
     document.getElementById("appearAbout").style.display="none"; 
     document.getElementById("appearWho").style.display="none"; 
     document.getElementById("home").style.display="none";
+    document.getElementById("bgpic").style.display="none";
   }
 
   function home() {
     document.getElementById("home").style.display="block";
     document.getElementById("appearWho").style.display="none"; 
     document.getElementById("appearAbout").style.display="none"; 
-    document.getElementById("appearGame").style.display="none"; 
+    document.getElementById("appearGame").style.display="none";
+    document.getElementById("bgpic").style.display="block";
   }
 
 // ---------------------------------------- END OF FUNCTIONALITIES ----------------------------------------

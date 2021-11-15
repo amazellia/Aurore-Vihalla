@@ -1,0 +1,58 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Modern Antiqua', cursive;
+    color:royalblue;
+}
+
+    #navBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: royalblue;
+    font-family: 'Modern Antiqua', cursive;
+  }
+  
+    #navItem  li {
+    float: left;
+  }
+  
+    #navItem li a  {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+   #navItem li a:hover {
+    background-color: #111;
+  }
+
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline;
+}
+
+svg {
+    font-size: 40px;
+}
+a{
+    color: slateblue;
+}
+a:visited {
+    color: rgb(60, 51, 112);
+}
+#title {
+    font-size: 80px;
+    text-align: center;
+}
+
+#home {
+    margin: 7rem;
+}

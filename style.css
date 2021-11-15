@@ -185,14 +185,14 @@ body #unicorn {
   border-radius: 25px;
 }
 
-.bgpic {
+#bgpic {
   background-image: url('https://cdna.artstation.com/p/assets/images/images/025/705/716/large/yang-sohyeon-jpg.jpg?1586681757');
-  height: 100%;
+  
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-attachment: fixed;
+  display: block;
 }
   
   /* Small screens */
